@@ -1,0 +1,61 @@
+// 把这套样式移出element-plus-override
+// 因为这不是纯粹的override
+// 而是需求使用者提供.tab-item这一额外实体
+.el-tabs--border-card.elx
+    >.el-tabs__header
+        border-bottom 1px solid $black40
+        background-color $black10
+
+        .el-tabs__nav-wrap.is-scrollable
+            padding 0px 14px
+
+        .el-tabs__nav-prev, .el-tabs__nav-next
+            display flex
+            z-index 10
+            height 100%
+            align-items center
+
+        .el-tabs__nav-prev:not(.is-disabled)
+            box-shadow 4px 0px 4px rgba(0, 0, 0, 0.4)
+
+        .el-tabs__nav-next:not(.is-disabled)
+            box-shadow -4px 0px 4px rgba(0, 0, 0, 0.4)
+
+        .el-tabs__item
+            display inline-flex
+            height 34px
+            padding 0px
+            align-items center
+            line-height 34px
+
+            &:nth-child(2)
+                padding-left 0px !important
+            
+            &:last-child
+                padding-right 0px !important
+
+            &:hover
+                cursor default
+
+            &.is-active
+                border-right-color $black40
+                border-left-color $black40
+                // background-color $black03
+
+            &:not(.is-disabled):not(.is-active):hover
+                color $black40
+
+                >.tab-item
+                    background-color $primary10
+
+            >.tab-item
+                display flex
+                // width 56px
+                height 32px
+                justify-content center
+                align-items center
+                transition background-color 0.25s
+
+    >.el-tabs__content
+        flex-grow 1
+        padding 0px
