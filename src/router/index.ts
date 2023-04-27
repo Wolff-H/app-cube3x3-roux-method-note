@@ -7,6 +7,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 
 // views //
 import PageNotFound from "@/ui/view-page-not-found/index.vue"
+import Home from "@/ui/view-home/index.vue"
 
 /**********************************************************************************************************************/
 
@@ -16,6 +17,10 @@ const routes: RouteRecordRaw[] =
     {
         path: '/:pathMatch(.*)',
         component: PageNotFound,
+    },
+    {
+        path: '/',
+        component: Home,
     },
 ]
 

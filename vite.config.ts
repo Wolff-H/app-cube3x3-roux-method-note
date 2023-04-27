@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue"
 import UnpluginAutoImport from 'unplugin-auto-import/vite'
 import UnpluginVueComponents from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+// import VueTypeImports from 'vite-plugin-vue-type-imports'
 import * as path from "path"
 
 // https://vitejs.dev/config/
@@ -38,6 +39,7 @@ export default defineConfig(({ command, mode }) => {
                     UnpluginVueComponents({
                         resolvers: [ElementPlusResolver()],
                     }),
+                    // VueTypeImports(),
                 ],
                 css:
                 {
@@ -73,6 +75,7 @@ export default defineConfig(({ command, mode }) => {
                 },
                 plugins:
                 [
+                    // VueTypeImports(),
                     vue(),
                     UnpluginAutoImport({
                         dts: true,

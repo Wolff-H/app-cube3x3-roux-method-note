@@ -1,11 +1,6 @@
 <template lang="pug">
 #view-page-not-found
     |page not found.
-
-    el-button(type="primary")
-        |一个按钮
-    el-input
-    el-date-picker(type="daterange")
 </template>
 
 
