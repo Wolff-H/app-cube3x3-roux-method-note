@@ -12,6 +12,7 @@
                 v-for="(topic, index) of content_schema.body"
                 :key="index"
                 v-bind="topic"
+                :order_number="index + 1"
             )
 </template>
 

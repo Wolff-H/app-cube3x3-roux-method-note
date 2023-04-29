@@ -1,7 +1,7 @@
 <template lang="pug">
 .topic
     .title
-        |{{ props.topic }}
+        |{{ `${props.order_number ? (props.order_number + '. ') : ''}${props.topic}` }}
         span.weak
             |{{ props.topic_comment }}
     .content
@@ -19,6 +19,7 @@
             v-for="(topic, index) of props.children"
             :key="index"
             v-bind="topic"
+            :order_number="index + 1"
         )
 </template>
 
@@ -33,7 +34,7 @@ export default {
 import type { Topic } from "@/types"
 import CAnalysis from "./c-analysis.vue"
 
-const props = defineProps<Topic>()
+const props = defineProps<Topic & { order_number?: number }>()
 
 </script>
 
