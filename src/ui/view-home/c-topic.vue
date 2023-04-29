@@ -1,5 +1,8 @@
 <template lang="pug">
-.topic
+.topic(
+    :data-topic="props.topic"
+    :data-id="props.id"
+)
     .title
         |{{ `${props.order_number ? (props.order_number + '. ') : ''}${props.topic}` }}
         span.weak

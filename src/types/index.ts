@@ -19,6 +19,7 @@ export type Topic =
 {
     topic: string
     topic_comment?: string
+    id?: string
     content?: htmlstring
     analysis?: Analysis
     children?: Topic[]

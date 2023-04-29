@@ -69,6 +69,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双列',
                                     topic_comment: 'H-Columns',
+                                    id: 'CMLL_Case:H-Columns',
                                     content: `顶角块呈「双列」模式。`,
                                     analysis:
                                     {
@@ -96,6 +97,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双行',
                                     topic_comment: 'H-Rows',
+                                    id: 'CMLL_Case:H-Rows',
                                     content: `顶角块呈「双行」模式。`,
                                     analysis:
                                     {
@@ -124,6 +126,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '单列',
                                     topic_comment: 'H-Column',
+                                    id: 'CMLL_Case:H-Column',
                                     content: `顶角块呈「单列」模式。`,
                                     analysis:
                                     {
@@ -149,6 +152,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '单行',
                                     topic_comment: 'H-Row',
+                                    id: 'CMLL_Case:H-Row',
                                     content: `顶角块呈「单行」模式。`,
                                     analysis:
                                     {
@@ -199,6 +203,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '右列',
                                     topic_comment: 'Pi-RightColumn',
+                                    id: 'CMLL_Case:Pi-RightColumn',
                                     content: `顶角块呈「右列」模式。`,
                                     analysis:
                                     {
@@ -226,6 +231,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '左列',
                                     topic_comment: 'Pi-LeftColumn',
+                                    id: 'CMLL_Case:Pi-LeftColumn',
                                     content: `顶角块呈「左列」模式。`,
                                     analysis:
                                     {
@@ -253,6 +259,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '正斜',
                                     topic_comment: 'Pi-ForwardOblique',
+                                    id: 'CMLL_Case:Pi-ForwardOblique',
                                     content: `顶角块呈「正斜」模式。`,
                                     analysis:
                                     {
@@ -282,6 +289,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '反斜',
                                     topic_comment: 'Pi-BackOblique',
+                                    id: 'CMLL_Case:Pi-BackOblique',
                                     content: `顶角块呈「反斜」模式。`,
                                     analysis:
                                     {
@@ -312,6 +320,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '叉',
                                     topic_comment: 'Pi-X',
+                                    id: 'CMLL_Case:Pi-X',
                                     content: `顶角块呈「叉」模式。`,
                                     analysis:
                                     {
@@ -338,6 +347,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双列',
                                     topic_comment: 'Pi-Columns',
+                                    id: 'CMLL_Case:Pi-Columns',
                                     content: `顶角块呈「双列」模式。`,
                                     analysis:
                                     {
@@ -372,6 +382,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '正杠',
                                     topic_comment: 'U-ForwardSlash',
+                                    id: 'CMLL_Case:U-ForwardSlash',
                                     content: `顶角块呈「正杠」模式。`,
                                     analysis:
                                     {
@@ -401,6 +412,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '反杠',
                                     topic_comment: 'U-BackSlash',
+                                    id: 'CMLL_Case:U-BackSlash',
                                     content: `顶角块呈「反杠」模式。`,
                                     analysis:
                                     {
@@ -429,6 +441,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '前条',
                                     topic_comment: 'U-FrontBar',
+                                    id: 'CMLL_Case:U-FrontBar',
                                     content: `顶角块呈「前条」模式。`,
                                     analysis:
                                     {
@@ -456,6 +469,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '后条',
                                     topic_comment: 'U-BackBar',
+                                    id: 'CMLL_Case:U-BackBar',
                                     content: `顶角块呈「后条」模式。`,
                                     analysis:
                                     {
@@ -481,6 +495,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双行',
                                     topic_comment: 'U-Rows',
+                                    id: 'CMLL_Case:U-Rows',
                                     content: `顶角块呈「双行」模式。`,
                                     analysis:
                                     {
@@ -510,6 +525,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '叉',
                                     topic_comment: 'U-X',
+                                    id: 'CMLL_Case:U-X',
                                     content: `顶角块呈「叉」模式。`,
                                     analysis:
                                     {
@@ -543,6 +559,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '左竿',
                                     topic_comment: 'T-LeftPole',
+                                    id: 'CMLL_Case:T-LeftPole',
                                     content: `顶角块呈「左竿」模式。`,
                                     analysis:
                                     {
@@ -569,6 +586,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '右竿',
                                     topic_comment: 'T-RightPole',
+                                    id: 'CMLL_Case:T-RightPole',
                                     content: `顶角块呈「右竿」模式。`,
                                     analysis:
                                     {
@@ -595,6 +613,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双行',
                                     topic_comment: 'T-Rows',
+                                    id: 'CMLL_Case:T-Rows',
                                     content: `顶角块呈「双行」模式。`,
                                     analysis:
                                     {
@@ -624,6 +643,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双竿',
                                     topic_comment: 'T-Poles',
+                                    id: 'CMLL_Case:T-Poles',
                                     content: `顶角块呈「双竿」模式。`,
                                     analysis:
                                     {
@@ -651,6 +671,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '前行',
                                     topic_comment: 'T-FrontRow',
+                                    id: 'CMLL_Case:T-FrontRow',
                                     content: `顶角块呈「前行」模式。`,
                                     analysis:
                                     {
@@ -679,6 +700,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '后行',
                                     topic_comment: 'T-BackRow',
+                                    id: 'CMLL_Case:T-BackRow',
                                     content: `顶角块呈「后行」模式。`,
                                     analysis:
                                     {
@@ -713,6 +735,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '左竿',
                                     topic_comment: 'S-LeftPole',
+                                    id: 'CMLL_Case:S-LeftPole',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -738,6 +761,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '右竿',
                                     topic_comment: 'S-RightPole',
+                                    id: 'CMLL_Case:S-RightPole',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -765,6 +789,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '正杠',
                                     topic_comment: 'S-ForwardSlash',
+                                    id: 'CMLL_Case:S-ForwardSlash',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -796,6 +821,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '逆杠',
                                     topic_comment: 'S-BackSlash',
+                                    id: 'CMLL_Case:S-BackSlash',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -826,6 +852,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双竿',
                                     topic_comment: 'S-Poles',
+                                    id: 'CMLL_Case:S-Poles',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -856,6 +883,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '叉',
                                     topic_comment: 'S-X',
+                                    id: 'CMLL_Case:S-X',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -893,6 +921,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '右竿',
                                     topic_comment: 'AS-RightPole',
+                                    id: 'CMLL_Case:AS-RightPole',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -923,6 +952,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '左竿',
                                     topic_comment: 'AS-LeftPole',
+                                    id: 'CMLL_Case:AS-LeftPole',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -953,6 +983,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '正杠',
                                     topic_comment: 'AS-ForwardSlash',
+                                    id: 'CMLL_Case:AS-ForwardSlash',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -983,6 +1014,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '逆杠',
                                     topic_comment: 'AS-BackSlash',
+                                    id: 'CMLL_Case:AS-BackSlash',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -1013,6 +1045,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '双竿',
                                     topic_comment: 'AS-Poles',
+                                    id: 'CMLL_Case:AS-Poles',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
@@ -1043,6 +1076,7 @@ const content_schema: ContentSchema =
                                 {
                                     topic: '叉',
                                     topic_comment: 'AS-X',
+                                    id: 'CMLL_Case:AS-X',
                                     content: `顶角块呈「」模式。`,
                                     analysis:
                                     {
