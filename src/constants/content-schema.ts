@@ -634,7 +634,7 @@ const content_schema: ContentSchema =
                                             { group: 1, order: 1, actions: 'F+ R- F+ R-' },
                                             { group: 2, order: 1, actions: 'R- U- R- U-' },
                                             { group: 3, order: 2, actions: 'R+' },
-                                            { group: 4, order: 4, actions: 'U+' },
+                                            { group: 4, order: 3, actions: 'U+' },
                                             { group: 3, order: 2, actions: 'R-' },
                                             { group: 6, order: 1, actions: 'F^' },
                                         ],
