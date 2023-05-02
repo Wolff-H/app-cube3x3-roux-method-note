@@ -232,6 +232,9 @@ defineExpose({
                 align-items center
                 color $black60
 
+                &:active
+                    background-color $shadow10
+
                 .i-icon
                     transform rotate(90deg)
 
@@ -261,7 +264,12 @@ defineExpose({
 
         .topic:not([data-id])
             >.title
+                position relative
+                left -8px
+                width 100vw
+                padding 4px 8px
                 background-color $primary10
+                color $blue70
 
         .analysis
             >.figure-container
