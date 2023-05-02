@@ -45,7 +45,7 @@ const props = defineProps<Topic & { order_number?: number }>()
 
 <style lang="stylus">
 .topic
-    margin 8px 0px
+    padding 8px 0px
 
     >.title
         font-weight bold

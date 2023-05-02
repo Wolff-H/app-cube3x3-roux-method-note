@@ -88,6 +88,7 @@ import CTopic from "./c-topic.vue"
 import {
     More as IconMore,
 } from "@icon-park/vue-next"
+import scrollIntoViewListened from "@/common/utils/scrollIntoViewListened"
 
 const topic_CMLL = computed(() => {
     return content_schema.body.find((topic) => topic.topic === 'CMLL')?.children?.[0].children || []
@@ -125,7 +126,16 @@ function scrollToTopic(id?: string)
 
     if (dom_topic)
     {
-        dom_topic.scrollIntoView({ behavior: 'smooth' })
+        scrollIntoViewListened(dom_topic, { behavior: 'smooth' })
+            .then(() => {
+                setTimeout(() => {
+                    dom_topic.classList.add('o-emphasis')
+                }, 250)
+
+                setTimeout(() => {
+                    dom_topic.classList.remove('o-emphasis')
+                }, 1250)
+            })
     }
 }
 
@@ -291,6 +301,12 @@ defineExpose({
     &.hide-formula-symmetry-factorized
         .formula.symmetry-factorized
             display none
+
+    .topic
+        transition background-color 1s
+
+        &.o-emphasis
+            background-color $orange20
 
     span.weak
         margin-left 16px
