@@ -839,13 +839,10 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'U+ R+ U-' },
+                                            { group: 2, order: 2, actions: 'L-' },
+                                            { group: 1, order: 1, actions: 'U+ R- U-' },
+                                            { group: 3, order: 2, actions: 'L+' },
                                         ],
                                     },
                                 },
@@ -870,13 +867,12 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'F+ R-' },
+                                            { group: 2, order: 2, actions: 'U^' },
+                                            { group: 1, order: 1, actions: 'R+ F-' },
+                                            { group: 3, order: 1, actions: 'R- F+' },
+                                            { group: 4, order: 2, actions: 'U^' },
+                                            { group: 3, order: 1, actions: 'F- R+' },
                                         ],
                                     },
                                 },
@@ -901,13 +897,9 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'U+' },
+                                            { group: 2, order: 1, actions: 'L- U^ L+ U^' },
+                                            { group: 3, order: 1, actions: 'L+ F- L- F+' },
                                         ],
                                     },
                                 },
@@ -918,37 +910,6 @@ const content_schema: ContentSchema =
                             content: `模式：。<br />该大类包含「」、「」、「」、「」、「」、「」共6个具体构型。`,
                             children:
                             [
-                                {
-                                    topic: '右竿',
-                                    topic_comment: 'AS-RightPole',
-                                    id: 'CMLL_Case:AS-RightPole',
-                                    content: `顶角块呈「」模式。`,
-                                    analysis:
-                                    {
-                                        figure_config:
-                                        {
-                                            type: '2d-corners',
-                                            schema:
-                                            [
-                                                ' g Y ',
-                                                'Yr Br',
-                                                '     ',
-                                                'gY oY',
-                                                ' o B ',
-                                            ],
-                                        },
-                                        algorithm_pattern:
-                                        [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
-                                        ],
-                                    },
-                                },
                                 {
                                     topic: '左竿',
                                     topic_comment: 'AS-LeftPole',
@@ -970,13 +931,36 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'R- U-' },
+                                            { group: 2, order: 2, actions: 'R+ U- R- U+' },
+                                            { group: 3, order: 2, actions: 'R- F+ R+ F-' },
+                                            { group: 1, order: 1, actions: 'U+ R+' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    topic: '右竿',
+                                    topic_comment: 'AS-RightPole',
+                                    id: 'CMLL_Case:AS-RightPole',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                ' g Y ',
+                                                'Yr Br',
+                                                '     ',
+                                                'gY oY',
+                                                ' o B ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'U+ R- U- R+' },
+                                            { group: 2, order: 1, actions: 'U- R- U+ R+' },
                                         ],
                                     },
                                 },
@@ -1001,13 +985,8 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'U- L- U+ R+' },
+                                            { group: 2, order: 1, actions: 'U- L+ U+ R-' },
                                         ],
                                     },
                                 },
@@ -1032,13 +1011,9 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'U-' },
+                                            { group: 2, order: 1, actions: 'F- L+ F+ L-' },
+                                            { group: 3, order: 1, actions: 'U^ L- U^ L+' },
                                         ],
                                     },
                                 },
@@ -1063,13 +1038,13 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'U-' },
+                                            { group: 2, order: 1, actions: 'R- F+' },
+                                            { group: 3, order: 2, actions: 'U^' },
+                                            { group: 2, order: 1, actions: 'F- R+' },
+                                            { group: 4, order: 1, actions: 'F+ R-' },
+                                            { group: 5, order: 2, actions: 'U^' },
+                                            { group: 4, order: 1, actions: 'R+ F-' },
                                         ],
                                     },
                                 },
@@ -1094,13 +1069,189 @@ const content_schema: ContentSchema =
                                         },
                                         algorithm_pattern:
                                         [
-                                            { group: 1, order: 1, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 4, order: 4, actions: '' },
-                                            { group: 3, order: 3, actions: '' },
-                                            { group: 2, order: 2, actions: '' },
-                                            { group: 1, order: 1, actions: '' },
+                                            { group: 1, order: 1, actions: 'U-' },
+                                            { group: 2, order: 1, actions: 'R+ U^' },
+                                            { group: 3, order: 1, actions: 'R- U^' },
+                                            { group: 4, order: 1, actions: 'R- F+ R+ F-' },
+                                        ],
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            topic: 'L',
+                            content: `模式：。<br />该大类包含「」、「」、「」、「」、「」、「」共6个具体构型。`,
+                            children:
+                            [
+                                {
+                                    topic: 'Mirror',
+                                    topic_comment: 'L-Mirror',
+                                    id: 'CMLL_Case:L-Mirror',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'U^' },
+                                            { group: 2, order: 2, actions: 'F+ R+ U- R-' },
+                                            { group: 3, order: 1, actions: 'U^' },
+                                            { group: 2, order: 2, actions: 'R+ U+ R- F-' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    topic: 'Inverse',
+                                    topic_comment: 'L-Inverse',
+                                    id: 'CMLL_Case:L-Inverse',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'U^' },
+                                            { group: 2, order: 1, actions: 'F+ R- F- R+' },
+                                            { group: 3, order: 1, actions: 'U+ R+ U- R-' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    topic: 'Pure',
+                                    topic_comment: 'L-Pure',
+                                    id: 'CMLL_Case:L-Pure',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'R+ U^' },
+                                            { group: 2, order: 1, actions: 'R- U- R+ U+' },
+                                            { group: 3, order: 1, actions: 'R- U- R+ U+' },
+                                            { group: 4, order: 1, actions: 'R- U- R+ U+' },
+                                            { group: 5, order: 1, actions: 'U+ R+' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    topic: 'Diagonal',
+                                    topic_comment: 'L-Diagonal',
+                                    id: 'CMLL_Case:L-Diagonal',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'R- U- R+ U+' },
+                                            { group: 2, order: 2, actions: 'R- F- R+ U+' },
+                                            { group: 3, order: 3, actions: 'R-' },
+                                            { group: 2, order: 2, actions: 'U- R- F+ R+' },
+                                            { group: 3, order: 3, actions: 'R+' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    topic: 'FrontCommutator',
+                                    topic_comment: 'L-FrontCommutator',
+                                    id: 'CMLL_Case:L-FrontCommutator',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'U+' },
+                                            { group: 2, order: 1, actions: 'U+ R+ U^ R+' },
+                                            { group: 3, order: 2, actions: 'D+ R-' },
+                                            { group: 4, order: 1, actions: 'U^' },
+                                            { group: 3, order: 2, actions: 'R+ D-' },
+                                            { group: 5, order: 1, actions: 'R^' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    topic: 'BackCommutator',
+                                    topic_comment: 'L-BackCommutator',
+                                    id: 'CMLL_Case:L-BackCommutator',
+                                    content: `顶角块呈「」模式。`,
+                                    analysis:
+                                    {
+                                        figure_config:
+                                        {
+                                            type: '2d-corners',
+                                            schema:
+                                            [
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                                '     ',
+                                            ],
+                                        },
+                                        algorithm_pattern:
+                                        [
+                                            { group: 1, order: 1, actions: 'U+ R- U^ R-' },
+                                            { group: 2, order: 2, actions: 'D- R+' },
+                                            { group: 3, order: 1, actions: 'U^' },
+                                            { group: 2, order: 2, actions: 'R- D+' },
+                                            { group: 4, order: 1, actions: 'R^' },
                                         ],
                                     },
                                 },
