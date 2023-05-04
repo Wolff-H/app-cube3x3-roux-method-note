@@ -1084,7 +1084,7 @@ const content_schema: ContentSchema =
                             children:
                             [
                                 {
-                                    topic: 'Mirror',
+                                    topic: '横叉',
                                     topic_comment: 'L-Mirror',
                                     id: 'CMLL_Case:L-Mirror',
                                     content: `顶角块呈「」模式。`,
@@ -1112,7 +1112,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: 'Inverse',
+                                    topic: '竖叉',
                                     topic_comment: 'L-Inverse',
                                     id: 'CMLL_Case:L-Inverse',
                                     content: `顶角块呈「」模式。`,
@@ -1139,7 +1139,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: 'Pure',
+                                    topic: '主夹',
                                     topic_comment: 'L-Pure',
                                     id: 'CMLL_Case:L-Pure',
                                     content: `顶角块呈「」模式。`,
@@ -1168,7 +1168,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: 'Diagonal',
+                                    topic: '主叉',
                                     topic_comment: 'L-Diagonal',
                                     id: 'CMLL_Case:L-Diagonal',
                                     content: `顶角块呈「」模式。`,
@@ -1197,7 +1197,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: 'FrontCommutator',
+                                    topic: '横夹',
                                     topic_comment: 'L-FrontCommutator',
                                     id: 'CMLL_Case:L-FrontCommutator',
                                     content: `顶角块呈「」模式。`,
@@ -1227,7 +1227,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: 'BackCommutator',
+                                    topic: '竖夹',
                                     topic_comment: 'L-BackCommutator',
                                     id: 'CMLL_Case:L-BackCommutator',
                                     content: `顶角块呈「」模式。`,
