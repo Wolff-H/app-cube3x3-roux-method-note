@@ -2,7 +2,7 @@
 .analysis
     .figure-container
         .figure.view-2d-corners(
-            v-if="props.figure_config.type === '2d-corners'"
+            v-if="['2d', '2d-corners'].includes(props.figure_config.type)"
         )
             .tile(
                 v-for="(color_name, index) of schema_parsed"
@@ -59,6 +59,7 @@
                             :key="index"
                             :data-group="partition.group"
                             :data-order="partition.order"
+                            :data-group-position="partition.group_position"
                         )
                             .action(
                                 v-for="(action, index) of partition.actions_parsed"

@@ -1261,6 +1261,237 @@ const content_schema: ContentSchema =
                 },
             ],
         },
+        {
+            topic: 'LSE（新手方法）',
+            topic_comment: 'Last 6 Edges, 最后6棱',
+            content: `
+                这一步其实并不依赖具体公式，而是非常直觉性的。
+                <br /><br />
+                最原教旨的桥式法，是先还原所有中心块与棱块的色向，然后还原顶面左棱和顶面右棱，最后还原M层棱。
+                <br /><br />
+                对于新手，更容易（尽管并不效率）的方法是
+                <br />
+                    &emsp;&emsp;1、还原F、B中心块<br />
+                    &emsp;&emsp;2、还原DF、DB棱块<br />
+                    &emsp;&emsp;3、还原全部顶层色向<br />
+                    &emsp;&emsp;4、还原全部顶层排列<br />
+            `.replace(/^    /gm, ''),
+            children:
+            [
+                {
+                    topic: '还原F、B中心块',
+                    content: '。。。',
+                },
+                {
+                    topic: '还原DF、DB棱块',
+                    content: `
+                        通过 {M, M'} U* {M', M} 还原底层DF、DB棱块。
+                    `.replace(/^    /gm, ''),
+                },
+                {
+                    topic: '还原全部顶层色向',
+                    content: `
+                        如果顶面存在「一组邻棱已翻仰」或「一组对棱已翻仰」的情况，执行翻棱公式。
+                        <br />
+                        如果不存在这两种情形，执行任一翻棱公式以进入这二者可翻棱情形。
+                    `.replace(/^    /gm, ''),
+                    children:
+                    [
+                        {
+                            topic: '存在一组邻棱色向正确',
+                            content: `
+                                将这组邻棱构成的角摆向左前方，执行公式。
+                            `,
+                            analysis:
+                            {
+                                figure_config:
+                                {
+                                    type: '2d',
+                                    schema:
+                                    [
+                                        '     ',
+                                        ' y y ',
+                                        ' Y   ',
+                                        ' yYy ',
+                                        '     ',
+                                    ],
+                                },
+                                algorithm_pattern:
+                                [
+                                    { group: 1, order: 1, actions: 'M-' },
+                                    { group: 2, order: 2, actions: 'U-' },
+                                    { group: 3, order: 1, actions: 'M+' },
+                                    { group: 4, order: 2, actions: 'U^' },
+                                    { group: 3, order: 1, actions: 'M-' },
+                                    { group: 5, order: 2, actions: 'U-' },
+                                    { group: 1, order: 1, actions: 'M+' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                    // { group: , order: , actions: '' },
+                                ],
+                            },
+                        },
+                        {
+                            topic: '存在一组对棱色向正确',
+                            content: `
+                                将这组对棱左右横置，执行公式。
+                            `,
+                            analysis:
+                            {
+                                figure_config:
+                                {
+                                    type: '2d',
+                                    schema:
+                                    [
+                                        '     ',
+                                        ' y y ',
+                                        ' Y Y ',
+                                        ' y y ',
+                                        '     ',
+                                    ],
+                                },
+                                algorithm_pattern:
+                                [
+                                    { group: 1, order: 1, actions: 'R+' },
+                                    { group: 2, order: 2, actions: 'U+ R- U-' },
+                                    { group: 3, order: 1, actions: 'M-' },
+                                    { group: 2, order: 2, actions: 'U+ R+ U-' },
+                                    { group: 4, order: 1, actions: 'r-' },
+                                ],
+                            },
+                        },
+                    ],
+                },
+                {
+                    topic: '还原全部顶层排列',
+                    content: `
+                        到这一步，顶层只会存在四种排列模式：「Ua」、「Ub」、「Z」、「H」，对应每种模式分别执行公式。
+                    `.replace(/^    /gm, ''),
+                    children:
+                    [
+                        {
+                            topic: 'Ua',
+                            content: `靠前侧的三棱逆时针交换。`,
+                            analysis:
+                            {
+                                figure_config:
+                                {
+                                    type: '2d',
+                                    schema:
+                                    [
+                                        '     ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        '     ',
+                                    ],
+                                },
+                                algorithm_pattern:
+                                [
+                                    { group: 1, order: 1, actions: 'M^' },
+                                    { group: 2, order: 2, actions: 'U+' },
+                                    { group: 3, order: 1, actions: 'M+' },
+                                    { group: 4, order: 2, actions: 'U^' },
+                                    { group: 3, order: 1, actions: 'M-' },
+                                    { group: 5, order: 2, actions: 'U+' },
+                                    { group: 1, order: 1, actions: 'M^' },
+                                ],
+                            },
+                        },
+                        {
+                            topic: 'Ub',
+                            content: `靠前侧的三棱顺时针交换。`,
+                            analysis:
+                            {
+                                figure_config:
+                                {
+                                    type: '2d',
+                                    schema:
+                                    [
+                                        '     ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        '     ',
+                                    ],
+                                },
+                                algorithm_pattern:
+                                [
+                                    { group: 1, order: 1, actions: 'M^' },
+                                    { group: 2, order: 2, actions: 'U-' },
+                                    { group: 3, order: 1, actions: 'M+' },
+                                    { group: 4, order: 2, actions: 'U^' },
+                                    { group: 3, order: 1, actions: 'M-' },
+                                    { group: 5, order: 2, actions: 'U-' },
+                                    { group: 1, order: 1, actions: 'M^' },
+                                ],
+                            },
+                        },
+                        {
+                            topic: 'Z',
+                            content: `左下、右上的两组对棱双双交换。`,
+                            analysis:
+                            {
+                                figure_config:
+                                {
+                                    type: '2d',
+                                    schema:
+                                    [
+                                        '     ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        '     ',
+                                    ],
+                                },
+                                algorithm_pattern:
+                                [
+                                    { group: 1, order: 1, actions: 'M^ U+' },
+                                    { group: 2, order: 1, actions: 'M^ U+' },
+                                    { group: 3, order: 2, actions: 'M- U^' },
+                                    { group: 4, order: 1, actions: 'M^' },
+                                    { group: 3, order: 2, actions: 'U^ M+' },
+                                ],
+                            },
+                        },
+                        {
+                            topic: 'H',
+                            content: `对棱交换。`,
+                            analysis:
+                            {
+                                figure_config:
+                                {
+                                    type: '2d',
+                                    schema:
+                                    [
+                                        '     ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        ' YYY ',
+                                        '     ',
+                                    ],
+                                },
+                                algorithm_pattern:
+                                [
+                                    { group: 1, order: 1, actions: 'M^' },
+                                    { group: 2, order: 2, actions: 'U-' },
+                                    { group: 3, order: 1, actions: 'M^' },
+                                    { group: 4, order: 2, actions: 'U^' },
+                                    { group: 3, order: 1, actions: 'M^' },
+                                    { group: 5, order: 2, actions: 'U-' },
+                                    { group: 1, order: 1, actions: 'M^' },
+                                ],
+                            },
+                        },
+                    ],
+                },
+            ],
+        },
     ],
 }
 
