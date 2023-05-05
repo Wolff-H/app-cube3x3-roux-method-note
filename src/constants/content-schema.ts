@@ -1080,7 +1080,7 @@ const content_schema: ContentSchema =
                         },
                         {
                             topic: 'L',
-                            content: `模式：。<br />该大类包含「」、「」、「」、「」、「」、「」共6个具体构型。`,
+                            content: `模式：。<br />该大类包含「」、「」、「」、「」、「」、「」共6个具体构型。<br />我们约定，在顶面，由左上指向右下为主轴向量，由左向右为横轴向量，由上向下为竖轴向量。向量的正方向为首，负方向为尾。`,
                             children:
                             [
                                 {
@@ -1095,11 +1095,11 @@ const content_schema: ContentSchema =
                                             type: '2d-corners',
                                             schema:
                                             [
+                                                ' G Y ',
+                                                'oY oB',
                                                 '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
+                                                'Yr YG',
+                                                ' B r ',
                                             ],
                                         },
                                         algorithm_pattern:
@@ -1123,11 +1123,11 @@ const content_schema: ContentSchema =
                                             type: '2d-corners',
                                             schema:
                                             [
+                                                ' g Y ',
+                                                'OY bR',
                                                 '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
+                                                'Yg Yb',
+                                                ' R O ',
                                             ],
                                         },
                                         algorithm_pattern:
@@ -1139,7 +1139,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: '主夹',
+                                    topic: '尾夹',
                                     topic_comment: 'L-Pure',
                                     id: 'CMLL_Case:L-Pure',
                                     content: `顶角块呈「」模式。`,
@@ -1150,11 +1150,11 @@ const content_schema: ContentSchema =
                                             type: '2d-corners',
                                             schema:
                                             [
+                                                ' B Y ',
+                                                'RY oB',
                                                 '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
+                                                'Yg Yo',
+                                                ' R g ',
                                             ],
                                         },
                                         algorithm_pattern:
@@ -1168,7 +1168,7 @@ const content_schema: ContentSchema =
                                     },
                                 },
                                 {
-                                    topic: '主叉',
+                                    topic: '首叉',
                                     topic_comment: 'L-Diagonal',
                                     id: 'CMLL_Case:L-Diagonal',
                                     content: `顶角块呈「」模式。`,
@@ -1179,11 +1179,11 @@ const content_schema: ContentSchema =
                                             type: '2d-corners',
                                             schema:
                                             [
+                                                ' o Y ',
+                                                'bY bR',
                                                 '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
+                                                'Yo YG',
+                                                ' G R ',
                                             ],
                                         },
                                         algorithm_pattern:
@@ -1208,11 +1208,11 @@ const content_schema: ContentSchema =
                                             type: '2d-corners',
                                             schema:
                                             [
+                                                ' O Y ',
+                                                'bY gO',
                                                 '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
+                                                'Yg YR',
+                                                ' R b ',
                                             ],
                                         },
                                         algorithm_pattern:
@@ -1238,11 +1238,11 @@ const content_schema: ContentSchema =
                                             type: '2d-corners',
                                             schema:
                                             [
+                                                ' r Y ',
+                                                'GY oB',
                                                 '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
-                                                '     ',
+                                                'Yo Yr',
+                                                ' G B ',
                                             ],
                                         },
                                         algorithm_pattern:
