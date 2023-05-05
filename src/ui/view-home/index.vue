@@ -91,10 +91,10 @@ import {
 import scrollIntoViewListened from "@/common/utils/scrollIntoViewListened"
 
 const topic_CMLL = computed(() => {
-    return content_schema.body.find((topic) => topic.topic === 'CMLL')?.children?.[0].children || []
+    return content_schema.body.find((topic) => topic.topic === 'CMLL')?.children || []
 })
 
-const selected_classification = ref('H')
+const selected_classification = ref('O')
 const selected_classification_cases = computed(() => {
     return topic_CMLL.value.find((topic) => topic.topic === selected_classification.value)?.children || []
 })
