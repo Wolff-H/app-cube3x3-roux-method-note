@@ -518,7 +518,7 @@ const content_schema: ContentSchema =
                                         'br ob',
                                         '     ',
                                         'rY Yo',
-                                        ' g g ',
+                                        ' G G ',
                                     ],
                                 },
                                 algorithm_pattern:
