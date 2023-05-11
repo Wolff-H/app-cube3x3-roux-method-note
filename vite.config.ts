@@ -106,6 +106,10 @@ export default defineConfig(({ command, mode }) => {
                         },
                     },
                 },
+                build:
+                {
+                    outDir: 'docs',
+                },
             }
         }
     }
