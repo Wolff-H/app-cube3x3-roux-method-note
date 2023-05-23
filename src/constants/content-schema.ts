@@ -1170,7 +1170,7 @@ const content_schema: ContentSchema =
                                 [
                                     { group: 1, order: 1, actions: 'U^' },
                                     { group: 2, order: 2, actions: 'F+ R+ U- R-' },
-                                    { group: 3, order: 1, actions: 'U^' },
+                                    { group: 3, order: 1, actions: 'U-' },
                                     { group: 2, order: 2, actions: 'R+ U+ R- F-' },
                                 ],
                             },
