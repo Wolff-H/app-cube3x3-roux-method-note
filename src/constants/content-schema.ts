@@ -155,10 +155,11 @@ const content_schema: ContentSchema =
                                 },
                                 algorithm_pattern:
                                 [
-                                    { group: 1, order: 1, actions: 'R+ U+' },
-                                    { group: 2, order: 2, actions: 'U+ R- U- R+' },
-                                    { group: 3, order: 2, actions: 'U+ R- U- R+' },
-                                    { group: 4, order: 1, actions: 'R+ U+' },
+                                    { group: 1, order: 1, actions: 'R+ U^ R- U-' },
+                                    { group: 2, order: 1, actions: 'R+ U+ R- U-' },
+                                    { group: 3, order: 2, actions: 'R+' },
+                                    { group: 4, order: 1, actions: 'U' },
+                                    { group: 3, order: 2, actions: 'R-' },
                                 ],
                             },
                         },
